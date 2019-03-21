@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+
+<body>
+    <nav th:replace="layout :: header"></nav>
+
+    <div class="container" id="main-content">
+     	  <div class="table-responsive">
+                    <h5>List of devices</h5>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Device</th>
+                            <th>State</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Light</td>
+                            <td></td>
+                            <td>
+                                <a href="#" th:href="@{/control/light/on}" class="">
+     							 <i class="plus"></i>Turn On
+								</a>
+                         		<a href="#" th:href="@{/control/light/off}" class="">
+     							 <i class="plus"></i>Turn Off
+								</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+     	
+    </div><!-- /.container -->
+
+    <footer th:replace="layout :: footer"></footer>
+</body>
+</html>
